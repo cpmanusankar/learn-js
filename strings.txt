@@ -1,0 +1,20 @@
+concatenation - combine strings together
+
+typeof 2  --> 'number'
+
+typeof 'hello' --> 'string'
+
+
+'hello' + 3 hello3 (string) type coercion
+
+'$' + 20.95 + 7.99 --> '$20.957.99'
+
+'$' + (20.95 + 7.99) --> $28.9399999999998
+
+'$' + (2095 + 799) / 100  ---> '$28.94'
+
+'{1 + 1}' --> 2
+
+` `
+
+\'  \"  \n (new line) - escape character
