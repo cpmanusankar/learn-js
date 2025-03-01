@@ -3,11 +3,14 @@ tooltip - title attribute (hover)
 
 <!DOCTYPE html> //tell browser to use latest html
 <html>
-	<head> //contains info about page like style
-	<title>HTML CSS Review</title>
-	</head> 
-
-
-
-	<body></body> 
+<head> //contains info about page like style
+<title>HTML CSS Review</title>
+</head> 
+<body></body> 
 </html>
+
+//varible
+let const  
+
+console.log(typeof 3); check typ of variable, etc
+
