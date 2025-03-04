@@ -1,0 +1,10 @@
+Falsy Values 
+false 0 '' NaN undefined null
+
+
+console.log('text' / 5);   //NaN
+
+let variable1;
+console.log(variable1); //undefined
+
+null

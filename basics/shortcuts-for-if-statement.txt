@@ -1,0 +1,8 @@
+-Ternary operator ?:
+-Guard operator &&
+-Default operator ||
+
+true ? 'truthy' : 'falsy'  //similar to if else statement
+
+const result = true ? 'truthy' : 'falsy';
+
