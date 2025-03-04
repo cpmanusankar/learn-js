@@ -9,13 +9,138 @@
 
 
   <script>
+// object: property: value, //dot notation
+    console.log(localStorage.getItem('message'));
     const product = {
     name: 'socks',
-    price: 29
+    price: 29,
+    ['delivery-time']: '1 day' //bracket optional here
     };
     console.log(product);
     console.log(product.name);
     console.log(product.price);
+
+    product.name = 'cottton socks';
+    console.log(product.name);
+
+    product.material = 'cotton';
+    console.log(product);
+
+    delete product.material;
+    console.log(product);
+    console.log(product['price']);
+    console.log(typeof product['delivery-time'])
+
+
+    //nested object or object inside object
+    const product2 = {
+      name: 'shirt',
+      size: 26,
+      rating: {
+        star: 4.5,
+        count: 80
+      },
+      fun: function calculate() {
+        console.log('hi from function inside object');
+      }
+    }
+    console.log(product2);
+    console.log(product2.rating);
+    console.log(product2.rating.star);
+    console.log(product2.fun);
+    product2.fun(); //function inside an object is called a method. ex. console.log, Math.random, JSON, localStorage etc
+
+    // JSON : Javascript Object Notation, syntax similar to javascript object but with less features.
+
+// -JSON didn't support single quote so all strings in ""
+// -does not support function
+// -then why use?: 
+// 	JSON understood by almost every p.lang
+// 	universal
+// 	store data
+
+// Build in JSON Object: 
+// -convert JS object to JSON
+// JSON.stringify(product2)
+
+//remove from localStorage
+// localStorage.removeItem('name')
+
+console.log(JSON.stringify(product2));
+
+//JSON to JS Object: JSON.parse()
+
+const jsonObject = JSON.stringify(product2);
+
+console.log(JSON.parse(jsonObject));
+
+// localStorage
+// -variables are temp
+// -refresh --> variables deleted and reset
+
+// localStorage.setItem(name, value);
+//localStorage.getItem()
+// -only supports strings
+
+
+localStorage.setItem('message', 'hii');
+
+// null vs undefined
+
+// null = intentionally want something to be empty
+
+// Auto-Boxing [special object]: number, string, boolen.
+//not work with null undefined
+
+console.log('hello'.length);
+console.log('hello'.toUpperCase());
+
+const object1 = {
+	message: 'hello'
+};
+
+const obj2 = object1;
+
+object1.message = 'Good job';
+console.log(object1);
+console.log(obj2);
+
+
+//reference
+
+const object3 = {
+	message: 'hiii'
+};
+
+const object4 = {
+	message: 'hiii'
+};
+
+console.log(object4 === object3); //false eventhough content is same but reference is diff
+console.log(object1 === obj2); //same reference so true
+
+// Destructuring
+
+const obj5 = {
+	message: 'Goood',
+  price: 88
+};
+
+//const message = obj5.message;
+
+const {message, price} = obj5;
+console.log(message);
+console.log(price);
+
+//short hand property
+
+const obj6 = {
+  message: message
+};
+
+console.log(obj6);
+
+
   </script>
 </body>
 </html>
