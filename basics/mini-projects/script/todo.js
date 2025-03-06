@@ -11,13 +11,13 @@ function renderTodoList() {
     const { name, date } = todoObject;
 
     todoListHTML += `
-    <p>
-      ${name} ${date}
-      <button onClick="
+      <div>${name}</div>
+      <div>${date}</div>
+      <button class="delete-btn" onClick="
         todoList.splice(${i}, 1);
         renderTodoList();
       ">Delete</button>
-    </p>`;
+    `;
   }
   
   console.log(todoListHTML);
