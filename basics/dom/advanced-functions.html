@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Advanced Functions</title>
+</head>
+<body>
+
+
+  <script>
+
+    function greeting() {
+      console.log('hello');
+    }
+    greeting();
+
+    //functions are value
+    // const num = 2;
+    const function1 = function greeting() {
+      console.log('hello2');
+    }
+    // console.log(function1);
+    // console.log(typeof function1);
+
+    //function without a name - Anonymous function
+    const greetFunction = function(){
+      console.log('from anonymous fun');
+    }
+    greetFunction();
+
+    // Hoisting: we can read function before writing //order (function)
+
+
+    const object1 = {
+      name: 'manu',
+      fun: function(){
+        console.log('function from object');
+      }
+    };
+    object1.fun();
+
+
+    function run(param){
+      param();
+    };
+
+    run(function(){
+      console.log('hi from param');
+    });
+
+    //setTimeOut
+    //Asynchronous 
+    //synchronous - line by line
+
+    setTimeout(function() {
+      console.log('timeout');
+    }, 3000);
+    console.log('next line');
+
+    // setInterval(function(){
+    //   console.log('interval');
+    // }, 3000);
+
+    console.log('next line 2');
+
+
+
+
+  </script>
+</body>
+</html>
